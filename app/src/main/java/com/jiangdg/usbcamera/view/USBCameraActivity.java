@@ -24,6 +24,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Switch;
 import android.widget.Toast;
 
+
 import com.jiangdg.usbcamera.R;
 import com.jiangdg.usbcamera.UVCCameraHelper;
 import com.jiangdg.usbcamera.utils.FileUtils;
@@ -140,7 +141,8 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
         mUVCCameraView.setCallback(this);
         mCameraHelper = UVCCameraHelper.getInstance();
         mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_YUYV);
-        mCameraHelper.initUSBMonitor(this, mUVCCameraView, listener);
+        mCameraHelper.initUSBMonitor(this,mUVCCameraView,listener);
+        //mCameraHelper.initUSBMonitor(this, mUVCCameraView, listener);
 
 
         mCameraHelper.setOnPreviewFrameListener(new AbstractUVCCameraHandler.OnPreViewResultListener() {
